@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isogame</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="alternate" hreflang="fr" href="https://isoarnold.com/fr/paths" />
+<link rel="alternate" hreflang="en" href="https://isoarnold.com/en/paths" />
+<link rel="canonical" href="https://isoarnold.com/fr/paths" />
+</head>
+<header>Ismaila <span> Diallo</span> </header>
+<body>
+    
+    <!--Main container-->
+    <div class="main-container">
+        <div class="main">
+
+            <!--Heading-->
+            <h1>Math Addition <span>jeux de quiz :)</span></h1>
+            
+            <!--Main Box-->
+            <div class="main-box">
+                <div class="show-answer"><span id="ans"></span></div>
+
+                <div class="box1">
+                    <div class="box-col">
+
+                        <input type="textf" id="intext" class="intext11">
+                    </div>
+
+                    <div class="add-s">
+                        <p>+</p>
+                    </div>
+
+                    <div class="box-col">
+                        <input type="textf" id="intext1" class="intext11">
+                    </div>
+                </div>
+
+                <!--text input-->
+                <div class="box2">
+                    <input type="text" id="intext2">
+                </div>
+
+                <!--boutton-->
+                <div class="box2">
+                    <button class="btn" onclick="Game()">Check Answer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let n1 = Math.floor(Math.random()*200+1);
+        let n2 = Math.floor(Math.random()*200+1);
+
+        document.getElementById("intext").value = n1;
+        document.getElementById("intext1").value = n2;
+
+        let adds= n1 + n2;
+        function Game(){
+            var user= document.getElementById("intext2").value;
+
+            if(user == adds){
+                document.getElementById("ans").innerHTLM = "Brovo! Repose correct";
+            }else{
+                document.getElementById("ans").innerHTML = "Repose correct" + adds +". Reprend encore";
+            }
+            var user= document.getElementById("intext2").value ="";
+
+
+        n1 = Math.floor(Math.random()*200+1);
+        n2 = Math.floor(Math.random()*200+1);
+
+        document.getElementById("intext").value = n1;
+        document.getElementById("intext1").value = n2;
+
+        adds= n1 + n2;
+        }
+
+    </script>
+</body>
+</html>
